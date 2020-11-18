@@ -8,7 +8,8 @@ form.addEventListener('submit', (e)=>{
 
     successMessageJS.textContent = 'getting your forcast for ' + weatherLocationJS.value + ' ...'
 
-    fetch('http://localhost:3000/weather?address='+weatherLocationJS.value).then(
+
+    fetch('/weather?address='+weatherLocationJS.value).then(
         (response) =>{
             response.json().then((data)=>{
                 if (data.error){
